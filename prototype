@@ -1,0 +1,60 @@
+void main(){
+  bool finish = false;
+  
+  List board = makeBoard(); //20*20 보드 판 만들기
+  for (List i in board)
+    print(i);
+  
+  
+  List blue = polyomino(); // 파랑 블록 생성
+  List yellow = polyomino(); // 노랑 블록 생성
+  List red = polyomino(); // 빨강 블록 생성
+  List green = polyomino(); // 초록 블록 생성
+  
+  while(finish!=true){
+    nextBlockAlgorithm(blue);
+    nextBlockAlgorithm(yellow);
+    nextBlockAlgorithm(red);
+    nextBlockAlgorithm(green);
+  }
+  
+  winner();
+}
+
+
+List makeBoard(){
+  
+  List board = List<List>.generate(20, (int index) => List<int>.generate(20,(int index) => 0)); //20*20 행열 보드판
+  
+  return board;
+}
+
+List polyomino(){
+  /**
+  class Monmino{
+    ...
+  }
+  class Domino{
+    ...
+  }
+  class Triomino{
+    ...
+  }
+  class Tetromino{
+    ...
+  }
+  class Pentomino{
+    ...
+  }
+  **/
+  return [];
+}
+
+List nextBlockAlgorithm(List board){
+  return []; // 알고리즘 짜기
+}
+
+
+void winner(){
+  //누가 승리했는지
+}
